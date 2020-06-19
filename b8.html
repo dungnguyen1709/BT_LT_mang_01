@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhập kích thước mảng ");
+        } while (sizeArr <= 0);
+        
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+
+    }
+    
+    function displayArr(a) {
+        for (let i = 0; i < a.length; i++) {
+            document.write(a[i] + " ");
+        }
+
+    }
+    
+    function sortArr(a) {
+        for (let i = 0; i < a.length; i++) {
+            for (let j = i + 1; j < a.length; j++) {
+                if (a[i] < a[j]) {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+
+            }
+        }
+        return a;
+    }
+
+    let arr = new Array();
+    let temp = 0;
+    inputArr(arr);
+    displayArr(arr);
+    sortArr(arr);
+    document.write("<br>" + " Mảng sau khi được sắp xếp theo thứ tự giảm dần : " + sortArr(arr));
+</script>
+</body>
+</html>

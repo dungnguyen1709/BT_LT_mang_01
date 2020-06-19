@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhập kích thước mảng ")
+        } while (sizeArr <= 0)
+
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+
+    }
+
+        function checkDuplication(value,arr) {
+            for (let i = 0; i  < arr.length; i++) {
+                if (arr[i] == value) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function checkV(value,arr) {
+            if (checkDuplication(value,arr)) {
+                alert(" V is in the array ");
+            } else {
+                alert(" V is not in the array ");
+            }
+        }
+    let arr = new Array();
+    inputArr(arr);
+    let value = +prompt(" Nhập số V vào đây ");
+    checkV(value, arr);
+    checkDuplication(value,arr);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function inputArr(a) {
+       let sizeArr;
+       do {
+           sizeArr = +prompt(" Nhập kích thước mảng ");
+       } while (sizeArr <= 0);
+       for (let i = 0; i < sizeArr; i++) {
+           a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+       }
+
+   }
+
+   function displayArr(a) {
+       for (let i = 0; i < a.length; i++) {
+           document.write(a[i] + " ");
+       }
+
+   }
+
+   function maxValue(a) {
+       let max = a[0];
+       for (let i = 0; i < a.length; i++) {
+           if (max < a[i]) {
+               max = a[i];
+           }
+       }
+       return max;
+
+   }
+
+   function displayAverageOfElement(a) {
+       let average = 0;
+       let sum = 0;
+       for (let i = 0; i < a.length; i++) {
+           sum += a[i];
+       }
+       return average = sum / a.length;
+
+   }
+
+   let arr = new Array();
+   inputArr(arr);
+   displayArr(arr);
+   document.write("<br>" + " phần tử có giá trị lớn nhất trong mảng là " + maxValue(arr));
+   document.write("<br>" + " giá trị trung bình của các phần từ là " + displayAverageOfElement(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhập kích thước mảng ");
+        } while (sizeArr <= 0);
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+    }
+
+    function displayArr(a) {
+        for (let i = 0; i < a.length; i++) {
+            document.write(a[i] + " ");
+        }
+    }
+
+    function deleteArr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
+                index = i;
+            }
+        }
+
+    }
+    let arr = new Array()
+    inputArr(arr);
+    displayArr(arr);
+    let index = 0;
+    let value = +prompt(" Nhập vào 1 số V ");
+    arr.splice(index,1);
+    arr.push(0);
+    document.write("<br>" + " Mảng sau khi xóa V là : " + arr);
+
+
+</script>
+</body>
+</html>

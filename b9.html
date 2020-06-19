@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhập kích thước mảng ");
+        } while (sizeArr <= 0);
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+    }
+
+     function displayArr(a) {
+       for (let i = 0; i < a.length; i++) {
+         document.write(a[i] + " ");
+       }
+    }
+
+    function gopArr(a,b,c) {
+        for (let i = 0; i < a.length; i++) {
+            c[i]= a[i];
+        }
+        for (let i = 0; i < b.length; i++) {
+            c[i+a.length] = b[i];
+        }
+        return c;
+
+    }
+
+    let arrA= new Array();
+    let arrB = new Array();
+    let arrC = new Array();
+    inputArr(arrA);
+    document.write(" Mảng A là : [" +arrA.join(",") + "]");
+    inputArr(arrB);
+    document.write("<br>" + " Mảng B là : [" +arrB.join(",") + "]");
+    gopArr(arrA,arrB,arrC);
+    document.write("<br>" + " Mảng C là : [" + arrC.join(",") + "]");
+</script>
+</body>
+</html>

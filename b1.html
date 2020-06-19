@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt(" Nhập kích thước mảng ");
+        }while (sizeArr <= 0);
+
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt(" Nhập phần tử thứ " + i + " : ");
+        }
+
+    }
+
+    function displayArr(a) {
+        for (let i = 0; i < a.length; i ++) {
+            document.write(a[i] + " ");
+        }
+
+    }
+    
+    function countIntAbove10(a) {
+        let countIntAbove = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] >= 10) {
+                countIntAbove++;
+            }
+        }
+        return countIntAbove;
+
+    }
+
+let arr = new Array();
+    inputArray(arr);
+    displayArr(arr);
+    document.write("<br>" + " có " + countIntAbove10(arr) + " số lơn hớn hoặc bằng 10 ");
+
+</script>
+</body>
+</html>
